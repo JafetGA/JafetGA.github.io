@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="mensaje">
+                <textarea name="mensaje" id="encriptar" cols="" rows=""></textarea>
+                <p>⚠ Solo letras minúsculas y sin acentos</p>
+                <button type="submit" id="btnencriptar">Encriptar</button>
+                <button type="submit" id="btndesencriptar">Desencriptar</button>
+        </section>
+        <section class = "resultado">
+            <button id="boton-copiar"></button>
+            <div id="etiqueta">
+                <p id="mensajeNuevo"></p>
+            </div>
+            <div id="notFoundMessage">
+                <img src="images/incognito.svg" alt="No se encontro un mesaje" class="mensaje-no-encontrado">
+                <p> <strong>Ningún mensaje fue Encontrado</strong> </p>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+        </section>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+/* *{
+    border: 1px solid red;
+} */
+body{
+    background: #f3f5fc;
+    font-family: 'Inconsolata',monospace;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.mensaje{
+    width: 60%;
+    margin: 30px 10px 0;
+    text-align: center;
+}
+
+#encriptar{
+    font-size: 32px;
+    background: #f3f5fc;
+    color: #0A3871;
+    display: flex;
+    width: 100%;
+    height: 80%;
+    border: none;
+    resize: none;
+    outline: none;
+    padding: 10px 0 0 15px;
+}
+
+.mensaje p{
+    font-size: 20px;
+}
+
+.mensaje button{
+    padding: 1.3em 3em;
+    font-size: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin: 0 10px 0;
+    width: 45%;
+}
+.mensaje button:hover{
+    background-color: #0a3871;
+    box-shadow: 0px 15px 20px rgba(21, 125, 255, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.mensaje button:active {
+    transform: translateY(-1px);
+  }
+
+.resultado{
+    position: relative;
+    background-color: white;
+    width: 40%;
+    height: 90vh;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.455);
+    border-radius: 32px;
+    margin: 30px 10px 0;
+    /* text-align: center; */
+}
+
+#boton-copiar{
+    position: absolute;
+    top: 15px; /* Ajusta el valor según el espacio deseado entre el botón y la parte superior del div */
+    left: 22px; /* Ajusta el valor según el espacio deseado entre el botón y la parte izquierda del div */
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    background-image: url(images/copy.svg);
+    background-size: cover; /* Ajusta el tamaño de la imagen al botón */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen dentro del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s; 
+}
+#boton-copiar:hover{
+    transform: translateY(-7px);
+}
+
+#etiqueta{
+    position: relative;
+    max-height: 70%;
+    overflow-y: auto; /* Habilita la barra de desplazamiento vertical cuando el contenido excede la altura máxima */
+    border: 1px solid #ccc; /* Opcional: Agrega un borde al div */
+    text-align:left;
+    margin-block: 20%;
+    border: none
+}
+
+#mensajeNuevo{
+    white-space: pre-wrap; /* Permite saltos de línea en el texto */
+    margin: 10px 20px;
+    color: #0A3871;
+    font-weight: 600;
+    font-size:x-large;
+    width: 90%;
+}
+
+#notFoundMessage{
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.mensaje-no-encontrado{
+    width:  80%;
+    height: auto;
+    margin: 20% auto 0; 
+}
+
+.resultado p strong{
+    font-size: 30px;
+    font-weight: 700;
+}
+.resultado p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width: 1100px) {
+    main {
+      flex-direction: column;
+    }
+  
+    .mensaje {
+      width: 100%;
+      height: 60vh;
+      margin-bottom: 30px;
+    }
+  
+    .resultado {
+      width: 100%;
+      height: auto;
+      margin: 50px 0;
+    }
+
+    #mensajeNuevo{
+        font-size: large;
+    }
+
+    .mensaje-no-encontrado{
+        display: none;
+    }
+  }  
+@media screen and (max-width: 620px) {
+    main {
+        width: 90%;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .mensaje {
+        width: 100%;
+        height: 50vh;
+    }
+    #encriptar{
+        font-size: 22px;
+    }
+    .mensaje p{
+        font-size: 15px;
+    }
+    .mensaje button{
+        font-size: 80%;
+        margin: 10px 10px 0;
+        width: 80%;
+    }
+    .resultado {
+        width: auto;
+        height: 25vh;
+        margin: 120px 0 ;
+    }
+    .resultado p strong{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .resultado p{
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+}
